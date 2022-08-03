@@ -7,6 +7,13 @@ const wipe = document.querySelector('.wipe-transition'),
         nav.classList.add('nav-Open')
     });
 
+function delay(n){
+    return new Promise((done) => {
+        setTimeout(() => {
+            done();
+        }, n)
+    })
+}
 
 barba.init({
     sync: true,
@@ -14,6 +21,7 @@ barba.init({
     transitions: [{
     
         async leave() {
+            const done = this.async();
     
             TLAnim.to(wipe,{left: '0%', ease: "power2.out", duration: 0.5})
 
