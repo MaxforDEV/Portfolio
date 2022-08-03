@@ -140,4 +140,13 @@ nav .navbar {
         width: 45px;
         cursor: pointer;
     }
+    .wipe-transition{
+        width: 100vw;
+        height: 100vh;
+        background-color: gray;
+        position: absolute;
+        top: 0;
+        left: -110%;
+        z-index: 999;
+    }
 }
