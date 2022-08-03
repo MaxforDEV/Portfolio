@@ -13,13 +13,21 @@ barba.init({
 
     transitions: [{
     
-    async leave() {
+        async leave() {
     
-        TLAnim.to(wipe,{left: '0%', ease: "power2.out", duration: 0.5})
+            TLAnim.to(wipe,{left: '0%', ease: "power2.out", duration: 0.5})
 
-      }
-      
-        
+            await delay(1000);
+            done();
+
+        },
+        enter(){
+            
+            TLAnim
+            .to(wipe,{left: '100%', ease:"power2.in", duration: 0.5})
+            .set(wipe,{left: '-100%'})
+
+        }
       }
     ]
   
