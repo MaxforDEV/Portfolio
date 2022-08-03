@@ -1,0 +1,143 @@
+nav{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    width: 100%;
+    z-index: 99;
+}
+nav .navbar {
+    position: relative;
+    height: 100%;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navlogo .logo-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    width: 100px;
+}
+.navbar .navlogo{
+    display: flex;
+    flex-direction: row;
+}
+.navbar .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navlogo .logo-png{
+    margin-left: 13%;
+    margin-right:10px ;
+}
+
+.logo-header .f-name{
+    color: black;
+    font-family: 'Gruppo', cursive;
+    font-weight: bold;
+    font-size: clamp(20px, 2vw, 10px);
+}
+.logo-header .l-name{
+    color: black;
+    font-family: 'Gruppo', cursive;
+    font-weight: bold;
+    font-size: clamp(10px, 2vw, 10px);
+}
+
+.menu .nav-content{
+    text-align: center;
+    width: 7%;
+    margin: 0 24px;
+}
+
+.nav-content .a-content{
+    color: black;
+    font-size: clamp(17px, 2vw, 10px);
+    font-family: 'Gruppo', cursive;
+    text-decoration: none;
+    color: black;
+}
+
+.open-menu{
+    display: none;
+    position: absolute;
+    color: #fff;
+    gap: 5px;
+}
+.close-menu{
+    display: none;
+}
+
+@media (max-width: 790px) {
+    nav{
+        position: fixed;
+        top: 0;
+        left: -355px;
+        width: 350px;
+        height: 100%;
+        box-shadow: 0 0 5px;
+    }
+    .nav-Open{
+        transition: all 1s ease;
+        left: 0;
+    }
+    nav .navbar{
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+    .navbar .navlogo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        height: 150px;
+    }
+    .navlogo .logo-png{
+        margin: 0;
+    }
+    .navbar .menu{
+        display: block;
+        height: 300px;
+        margin-top: 50px;
+    }
+    .menu .nav-content{
+        padding: 20px;
+        width: 300px;
+        border-top: 1px solid rgb(145, 142, 142);
+    }
+    .menu .nav-content:nth-child(4){
+        border-bottom: 1px solid rgb(145, 142, 142);
+    }
+    .f-name{
+        font-size: 50px;
+    }
+    .close-menu{
+        display: flex;
+        position: absolute;
+        top: 5px;
+        left: 290px;
+        font-size: 40px;
+    }
+    .open-menu{
+        display: flex;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        color: black;
+        font-size: 40px;
+        width: 45px;
+        cursor: pointer;
+    }
+}
