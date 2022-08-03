@@ -1,19 +1,12 @@
-const btnOpen = document.querySelector('.open-menu'),
+const wipe = document.querySelector('.wipe-transition'),
+      TLAnim = new TimelineMax(),
+      btnOpen = document.querySelector('.open-menu'),
       nav = document.querySelector('nav');
 
       btnOpen.addEventListener('click', () => {
         nav.classList.add('nav-Open')
     });
 
-
-
-
-
-
-
-/* 
-const wipe = document.querySelector('.wipe-transition');
-const TLAnim = new TimelineMax();
 
 barba.init({
     sync: true,
@@ -30,4 +23,4 @@ barba.init({
       }
     ]
   
-}); */
+});
