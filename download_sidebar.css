@@ -87,6 +87,7 @@ nav .navbar {
         width: 350px;
         height: 100%;
         box-shadow: 0 0 5px;
+        transition: all 0.4s ease; 
     }
     .nav-Open{
         transition: all 1s ease;
